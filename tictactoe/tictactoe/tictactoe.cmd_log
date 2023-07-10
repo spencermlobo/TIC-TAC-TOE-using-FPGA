@@ -1,0 +1,20 @@
+xst -intstyle ise -ifn "E:/Mini Project/tictactoe/tictactoe.xst" -ofn "E:/Mini Project/tictactoe/tictactoe.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx4-tqg144-3 "tictactoe.ngc" tictactoe.ngd  
+map -intstyle ise -p xc6slx4-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o tictactoe_map.ncd tictactoe.ngd tictactoe.pcf 
+par -w -intstyle ise -ol high -mt off tictactoe_map.ncd tictactoe.ncd tictactoe.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml tictactoe.twx tictactoe.ncd -o tictactoe.twr tictactoe.pcf 
+xst -intstyle ise -ifn "E:/Mini Project/tictactoe/tictactoe.xst" -ofn "E:/Mini Project/tictactoe/tictactoe.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tictactoe_ucf.ucf -p xc6slx4-tqg144-3 "tictactoe.ngc" tictactoe.ngd  
+xst -intstyle ise -ifn "E:/Mini Project/tictactoe/tictactoe.xst" -ofn "E:/Mini Project/tictactoe/tictactoe.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tictactoe_ucf.ucf -p xc6slx4-tqg144-3 "tictactoe.ngc" tictactoe.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tictactoe_ucf.ucf -p xc6slx4-tqg144-3 "tictactoe.ngc" tictactoe.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tictactoe_ucf.ucf -p xc6slx4-tqg144-3 "tictactoe.ngc" tictactoe.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tictactoe_ucf.ucf -p xc6slx4-tqg144-3 "tictactoe.ngc" tictactoe.ngd  
+map -intstyle ise -p xc6slx4-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o tictactoe_map.ncd tictactoe.ngd tictactoe.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tictactoe_ucf.ucf -p xc6slx4-tqg144-3 "tictactoe.ngc" tictactoe.ngd  
+map -intstyle ise -p xc6slx4-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o tictactoe_map.ncd tictactoe.ngd tictactoe.pcf 
+par -w -intstyle ise -ol high -mt off tictactoe_map.ncd tictactoe.ncd tictactoe.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml tictactoe.twx tictactoe.ncd -o tictactoe.twr tictactoe.pcf -ucf tictactoe_ucf.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tictactoe_ucf.ucf -p xc6slx4-tqg144-3 "tictactoe.ngc" tictactoe.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tictactoe_ucf.ucf -p xc6slx4-tqg144-3 "tictactoe.ngc" tictactoe.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc tictactoe_ucf.ucf -p xc6slx4-tqg144-3 "tictactoe.ngc" tictactoe.ngd  

@@ -1,0 +1,10 @@
+//! **************************************************************************
+// Written by: Map P.58f on Wed Apr 20 07:20:22 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "pc" LOCATE = SITE "P16" LEVEL 1;
+COMP "play" LOCATE = SITE "P24" LEVEL 1;
+COMP "reset" LOCATE = SITE "P26" LEVEL 1;
+SCHEMATIC END;
+

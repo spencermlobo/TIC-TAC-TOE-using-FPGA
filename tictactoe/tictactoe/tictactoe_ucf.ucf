@@ -1,0 +1,15 @@
+	NET clock  LOC = P95 ; 	
+//Switches
+	NET reset  LOC = P26  ;
+	NET play  LOC = P24  ;
+	NET pc  LOC = P16  ;
+//Leds
+ //JA
+	NET pos1  LOC = P48 ; 	
+	NET pos2  LOC = P46  ;
+	NET pos3  LOC = P44  ;
+	NET pos4  LOC = P41  ;
+	NET pos5  LOC = P50  ;
+	NET pos6  LOC = P47  ;
+	NET pos7  LOC = P45  ;
+	NET pos8  LOC = P43  ; 	

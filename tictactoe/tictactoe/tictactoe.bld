@@ -1,0 +1,109 @@
+Release 14.5 ngdbuild P.58f (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -nt timestamp -uc tictactoe_ucf.ucf -p xc6slx4-tqg144-3
+tictactoe.ngc tictactoe.ngd
+
+Reading NGO file "E:/Mini Project/tictactoe/tictactoe.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "tictactoe_ucf.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+ERROR:ConstraintSystem:59 - Constraint <NET pos1  LOC = P48 ;>
+   [tictactoe_ucf.ucf(8)]: NET "pos1" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET pos1  LOC = P48 ;> [tictactoe_ucf.ucf(8)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET pos2  LOC = P46  ;>
+   [tictactoe_ucf.ucf(9)]: NET "pos2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET pos2  LOC = P46  ;> [tictactoe_ucf.ucf(9)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET pos3  LOC = P44  ;>
+   [tictactoe_ucf.ucf(10)]: NET "pos3" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET pos3  LOC = P44  ;> [tictactoe_ucf.ucf(10)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET pos4  LOC = P41  ;>
+   [tictactoe_ucf.ucf(11)]: NET "pos4" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET pos4  LOC = P41  ;> [tictactoe_ucf.ucf(11)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET pos5  LOC = P50  ;>
+   [tictactoe_ucf.ucf(12)]: NET "pos5" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET pos5  LOC = P50  ;> [tictactoe_ucf.ucf(12)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET pos6  LOC = P47  ;>
+   [tictactoe_ucf.ucf(13)]: NET "pos6" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET pos6  LOC = P47  ;> [tictactoe_ucf.ucf(13)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET pos7  LOC = P45  ;>
+   [tictactoe_ucf.ucf(14)]: NET "pos7" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET pos7  LOC = P45  ;> [tictactoe_ucf.ucf(14)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET pos8  LOC = P43  ;>
+   [tictactoe_ucf.ucf(15)]: NET "pos8" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET pos8  LOC = P43  ;> [tictactoe_ucf.ucf(15)]' could not be found and so
+   the Locate constraint will be removed.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     8
+  Number of warnings:   8
+
+Total memory usage is 130952 kilobytes
+
+Total REAL time to NGDBUILD completion:  8 sec
+Total CPU time to NGDBUILD completion:   6 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "tictactoe.bld"...

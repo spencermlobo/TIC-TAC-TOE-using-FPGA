@@ -1,0 +1,492 @@
+Release 14.5 - xst P.58f (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.30 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> Reading design: tictactoe.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "tictactoe.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "tictactoe"
+Output Format                      : NGC
+Target Device                      : xc6slx4-3-tqg144
+
+---- Source Options
+Top Module Name                    : tictactoe
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\Mini Project\tictactoe\tictactoe.v" into library work
+Parsing module <tictactoe>.
+Parsing module <position_registers>.
+Parsing module <fsm_controller>.
+Parsing module <nospace_detector>.
+Parsing module <illegal_move_detector>.
+Parsing module <position_decoder>.
+Parsing module <winner_detector>.
+Parsing module <winner_detect_3>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <tictactoe>.
+
+Elaborating module <position_registers>.
+
+Elaborating module <winner_detector>.
+
+Elaborating module <winner_detect_3>.
+
+Elaborating module <position_decoder>.
+
+Elaborating module <illegal_move_detector>.
+
+Elaborating module <nospace_detector>.
+
+Elaborating module <fsm_controller>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <tictactoe>.
+    Related source file is "E:\Mini Project\tictactoe\tictactoe.v".
+    Summary:
+	no macro.
+Unit <tictactoe> synthesized.
+
+Synthesizing Unit <position_registers>.
+    Related source file is "E:\Mini Project\tictactoe\tictactoe.v".
+    Found 2-bit register for signal <pos2>.
+    Found 2-bit register for signal <pos3>.
+    Found 2-bit register for signal <pos4>.
+    Found 2-bit register for signal <pos5>.
+    Found 2-bit register for signal <pos6>.
+    Found 2-bit register for signal <pos7>.
+    Found 2-bit register for signal <pos8>.
+    Found 2-bit register for signal <pos9>.
+    Found 2-bit register for signal <pos1>.
+    Summary:
+	inferred  18 D-type flip-flop(s).
+Unit <position_registers> synthesized.
+
+Synthesizing Unit <winner_detector>.
+    Related source file is "E:\Mini Project\tictactoe\tictactoe.v".
+    Summary:
+	no macro.
+Unit <winner_detector> synthesized.
+
+Synthesizing Unit <winner_detect_3>.
+    Related source file is "E:\Mini Project\tictactoe\tictactoe.v".
+    Summary:
+Unit <winner_detect_3> synthesized.
+
+Synthesizing Unit <position_decoder>.
+    Related source file is "E:\Mini Project\tictactoe\tictactoe.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <position_decoder> synthesized.
+
+Synthesizing Unit <illegal_move_detector>.
+    Related source file is "E:\Mini Project\tictactoe\tictactoe.v".
+    Summary:
+	no macro.
+Unit <illegal_move_detector> synthesized.
+
+Synthesizing Unit <nospace_detector>.
+    Related source file is "E:\Mini Project\tictactoe\tictactoe.v".
+    Summary:
+	no macro.
+Unit <nospace_detector> synthesized.
+
+Synthesizing Unit <fsm_controller>.
+    Related source file is "E:\Mini Project\tictactoe\tictactoe.v".
+        IDLE = 2'b00
+        PLAYER = 2'b01
+        COMPUTER = 2'b10
+        GAME_DONE = 2'b11
+    Found 2-bit register for signal <current_state>.
+    Found 4x1-bit Read Only RAM for signal <player_play>
+    Found 1-bit 4-to-1 multiplexer for signal <current_state[1]_PWR_8_o_wide_mux_18_OUT<1>> created at line 269.
+    Found 1-bit 4-to-1 multiplexer for signal <current_state[1]_PWR_8_o_wide_mux_18_OUT<0>> created at line 269.
+WARNING:Xst:737 - Found 1-bit latch for signal <computer_play>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   3 Latch(s).
+	inferred   6 Multiplexer(s).
+Unit <fsm_controller> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x1-bit single-port Read Only RAM                     : 1
+# Registers                                            : 10
+ 2-bit register                                        : 10
+# Latches                                              : 3
+ 1-bit latch                                           : 3
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 4
+ 1-bit 4-to-1 multiplexer                              : 2
+ 16-bit 2-to-1 multiplexer                             : 2
+# Xors                                                 : 32
+ 1-bit xor2                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <fsm_controller>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_player_play> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <current_state> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <player_play>   |          |
+    -----------------------------------------------------------------------
+Unit <fsm_controller> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x1-bit single-port distributed Read Only RAM         : 1
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 4
+ 1-bit 4-to-1 multiplexer                              : 2
+ 16-bit 2-to-1 multiplexer                             : 2
+# Xors                                                 : 32
+ 1-bit xor2                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <tictactoe> ...
+WARNING:Xst:1294 - Latch <tic_tac_toe_controller/next_state_0> is equivalent to a wire in block <tictactoe>.
+WARNING:Xst:1294 - Latch <tic_tac_toe_controller/next_state_1> is equivalent to a wire in block <tictactoe>.
+WARNING:Xst:1294 - Latch <tic_tac_toe_controller/computer_play> is equivalent to a wire in block <tictactoe>.
+
+Optimizing unit <position_registers> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block tictactoe, actual ratio is 3.
+FlipFlop tic_tac_toe_controller/current_state_0 has been replicated 2 time(s)
+FlipFlop tic_tac_toe_controller/current_state_1 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : tictactoe.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 90
+#      LUT2                        : 11
+#      LUT4                        : 27
+#      LUT5                        : 8
+#      LUT6                        : 44
+# FlipFlops/Latches                : 24
+#      FDC                         : 6
+#      FDCE                        : 18
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 31
+#      IBUF                        : 11
+#      OBUF                        : 20
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              24  out of   4800     0%  
+ Number of Slice LUTs:                   90  out of   2400     3%  
+    Number used as Logic:                90  out of   2400     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     94
+   Number with an unused Flip Flop:      70  out of     94    74%  
+   Number with an unused LUT:             4  out of     94     4%  
+   Number of fully used LUT-FF pairs:    20  out of     94    21%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          32
+ Number of bonded IOBs:                  32  out of    102    31%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 24    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.963ns (Maximum Frequency: 201.475MHz)
+   Minimum input arrival time before clock: 6.881ns
+   Maximum output required time after clock: 7.777ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 4.963ns (frequency: 201.475MHz)
+  Total number of paths / destination ports: 1632 / 42
+-------------------------------------------------------------------------
+Delay:               4.963ns (Levels of Logic = 4)
+  Source:            tic_tac_toe_controller/current_state_0 (FF)
+  Destination:       position_reg_unit/pos1_1 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: tic_tac_toe_controller/current_state_0 to position_reg_unit/pos1_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             19   0.447   1.072  tic_tac_toe_controller/current_state_0 (tic_tac_toe_controller/current_state_0)
+     LUT6:I5->O            3   0.205   0.755  pd2/Mmux_out_en121 (PL_en<5>)
+     LUT6:I4->O            2   0.203   0.721  imd_unit/illegal_move6 (imd_unit/illegal_move5)
+     LUT5:I3->O           18   0.203   1.050  position_reg_unit/_n0173_inv1_cepot_rstpot (position_reg_unit/_n0173_inv1_cepot_rstpot)
+     LUT4:I3->O            1   0.205   0.000  position_reg_unit/pos2_0_dpot1 (position_reg_unit/pos2_0_dpot1)
+     FDCE:D                    0.102          position_reg_unit/pos2_0
+    ----------------------------------------
+    Total                      4.963ns (1.365ns logic, 3.598ns route)
+                                       (27.5% logic, 72.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 1911 / 66
+-------------------------------------------------------------------------
+Offset:              6.881ns (Levels of Logic = 6)
+  Source:            computer_position<0> (PAD)
+  Destination:       position_reg_unit/pos1_1 (FF)
+  Destination Clock: clock rising
+
+  Data Path: computer_position<0> to position_reg_unit/pos1_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   0.907  computer_position_0_IBUF (computer_position_0_IBUF)
+     LUT2:I0->O            2   0.203   0.981  tic_tac_toe_controller/Mmux_current_state[1]_GND_8_o_Mux_17_o11_SW2 (N8)
+     LUT6:I0->O            3   0.203   0.879  pd1/Mmux_out_en81 (PC_en<1>)
+     LUT6:I3->O            2   0.205   0.721  imd_unit/illegal_move6 (imd_unit/illegal_move5)
+     LUT5:I3->O           18   0.203   1.050  position_reg_unit/_n0173_inv1_cepot_rstpot (position_reg_unit/_n0173_inv1_cepot_rstpot)
+     LUT4:I3->O            1   0.205   0.000  position_reg_unit/pos2_0_dpot1 (position_reg_unit/pos2_0_dpot1)
+     FDCE:D                    0.102          position_reg_unit/pos2_0
+    ----------------------------------------
+    Total                      6.881ns (2.343ns logic, 4.538ns route)
+                                       (34.0% logic, 66.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 164 / 20
+-------------------------------------------------------------------------
+Offset:              7.777ns (Levels of Logic = 5)
+  Source:            position_reg_unit/pos5_1 (FF)
+  Destination:       who<1> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: position_reg_unit/pos5_1 to who<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            10   0.447   1.085  position_reg_unit/pos5_1 (position_reg_unit/pos5_1)
+     LUT4:I1->O            1   0.205   0.684  win_detect_unit/who<0>18 (win_detect_unit/who<0>18)
+     LUT6:I4->O            1   0.203   0.808  win_detect_unit/who<0>19 (win_detect_unit/who<0>19)
+     LUT5:I2->O            4   0.205   0.788  win_detect_unit/who<0>110 (win_detect_unit/who<0>1)
+     LUT6:I4->O            1   0.203   0.579  win_detect_unit/who<1> (who_1_OBUF)
+     OBUF:I->O                 2.571          who_1_OBUF (who<1>)
+    ----------------------------------------
+    Total                      7.777ns (3.834ns logic, 3.943ns route)
+                                       (49.3% logic, 50.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    4.963|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.17 secs
+ 
+--> 
+
+Total memory usage is 205952 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
